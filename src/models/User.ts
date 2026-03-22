@@ -1,12 +1,17 @@
 import {Schema, model} from "mongoose";
 
 interface User{
+    handle:string
     name:string
     email:string
     password:string
 }
 
 const userSchema = new Schema({
+    handle: {
+        type: String,
+        required:true
+    },
     name: {
         type: String,
         required: true,
